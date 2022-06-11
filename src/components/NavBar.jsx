@@ -16,8 +16,8 @@ const NavBar = () => {
               <img
                 className="bi me-2"
                 width="64"
-                src="https://res.cloudinary.com/dxvzsg7fa/image/upload/v1654454032/PrestaGo/prestaGo-logo-png-recorte_blfwfn.png"
-                alt="presta-go"
+                src="https://res.cloudinary.com/dxvzsg7fa/image/upload/v1654914516/rick-and-morty-logo-also-buy-this-artwork-on-stickers-pickle-rick-board-game-11563506215qipcqzf4yn_b0wnp0.png"
+                alt="logo"
               />
             </a>
             <div

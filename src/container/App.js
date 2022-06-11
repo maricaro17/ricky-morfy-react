@@ -1,14 +1,12 @@
-import List from "../components/List";
-import styled from 'styled-components'
+import AppRouters from "../routers/AppRouters";
+import { StyledContainer } from "../style/style";
 
-const StyledContainer = styled.div`
-  background-color: #fbf976;
-`
+
 
 function App() {
   return (
     <StyledContainer>
-      <List />
+      <AppRouters />
     </StyledContainer>
   );
 }
