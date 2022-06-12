@@ -6,17 +6,18 @@ import * as Yup from "yup";
 import { useDispatch } from "react-redux";
 import { startRegisterWithEmailPasswordName } from "../redux/actions/authAction";
 import CustomButton from "../components/CustomButton";
+import { ContainerInput, Icon, InputText } from "../style/style";
+import { FaKey, FaEnvelope, FaUser } from "react-icons/fa";
 
 const Register = () => {
   const dispatch = useDispatch();
-  
+
   const formik = useFormik({
     initialValues: {
       name: "",
-      lastname: "",
       email: "",
       password: "",
-      password2: ""
+      password2: "",
     },
     validationSchema: Yup.object({
       name: Yup.string()
@@ -39,57 +40,44 @@ const Register = () => {
     }),
     onSubmit: (data) => {
       dispatch(startRegisterWithEmailPasswordName(data));
-      formik.resetForm(formik.initialStatus)
-    }
+      formik.resetForm(formik.initialStatus);
+    },
   });
-  const { name, lastname, email, password, password2 } = formik.values;
+  const { name, email, password, password2 } = formik.values;
   return (
-    <Container
-      className="d-flex m-auto align-self-center"
-      style={{
-        height: "80vh"
-      }}
-    >
+    <>
+    <Container>
+      <div className="d-flex align-items-center my-5 mx-5">
+      <div className="w-50">
+        <img src="https://res.cloudinary.com/dxvzsg7fa/image/upload/v1654996215/Rick-And-Morty-Wallpaper-Transparent-PNG_i5mswe.png" height={400} alt="" />
+      </div>
+      <div className="w-50">
       <Form onSubmit={formik.handleSubmit} className="m-auto">
-        <h1 className="mb-3 font-weight-normal">Registro</h1>
-
-        <Form.Group className="mb-3">
-          <Form.Label>Nombre:</Form.Label>
-          <Form.Control
+        <h1 className="my-5 text-dark">Registro</h1>
+        <ContainerInput className="mb-3">
+          <Icon>
+            <FaUser color="gray" size={24} />
+          </Icon>
+          <InputText
             className="mb-1"
             type="text"
-            placeholder="Ingrese su nombre"
+            placeholder="Nombre"
             name="name"
             value={name}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
           />
-        </Form.Group>
+        </ContainerInput>
         {formik.touched.name && formik.errors.name ? (
           <Container className="error-validation">
             {formik.errors.name}
           </Container>
         ) : null}
-        <Form.Group className="mb-3">
-          <Form.Label>Apellido:</Form.Label>
-          <Form.Control
-            className="mb-1"
-            type="text"
-            placeholder="Ingrese su apellido"
-            name="lastname"
-            value={lastname}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-          />
-        </Form.Group>
-        {formik.touched.lastname && formik.errors.lastname ? (
-          <Container className="error-validation">
-            {formik.errors.lastname}
-          </Container>
-        ) : null}
-        <Form.Group className="mb-3">
-          <Form.Label>Email:</Form.Label>
-          <Form.Control
+        <ContainerInput className="mb-3">
+        <Icon>
+              <FaEnvelope color="gray" size={24} />
+            </Icon>
+          <InputText
             className="mb-1"
             type="email"
             placeholder="Ingrese su Email"
@@ -98,15 +86,17 @@ const Register = () => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
           />
-        </Form.Group>
+        </ContainerInput>
         {formik.touched.email && formik.errors.email ? (
           <Container className="error-validation">
             {formik.errors.email}
           </Container>
         ) : null}
-        <Form.Group className="mb-3">
-          <Form.Label>Contraseña:</Form.Label>
-          <Form.Control
+        <ContainerInput className="mb-3">
+          <Icon>
+            <FaKey color="gray" size={24} />
+          </Icon>
+          <InputText
             className="mb-1"
             type="password"
             placeholder="Ingrese su Contraseña"
@@ -115,15 +105,17 @@ const Register = () => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
           />
-        </Form.Group>
+        </ContainerInput>
         {formik.touched.password && formik.errors.password ? (
           <Container className="error-validation">
             {formik.errors.password}
           </Container>
         ) : null}
-        <Form.Group className="mb-3">
-          <Form.Label>Confirmar Contraseña:</Form.Label>
-          <Form.Control
+        <ContainerInput className="mb-3">
+          <Icon>
+            <FaKey color="gray" size={24} />
+          </Icon>
+          <InputText
             className="mb-1"
             type="password"
             placeholder="Confirme su contraseña"
@@ -132,7 +124,7 @@ const Register = () => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
           />
-        </Form.Group>
+        </ContainerInput>
         {formik.touched.password2 && formik.errors.password2 ? (
           <Container className="error-validation">
             {formik.errors.password2}
@@ -153,7 +145,11 @@ const Register = () => {
           </span>
         </p>
       </Form>
+      </div>
+      </div>
     </Container>
+    </>
+    
   );
 };
 

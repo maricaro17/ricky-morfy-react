@@ -1,8 +1,4 @@
-import styled from 'styled-components'
-//Body
-export const StyledContainer = styled.div`
-  background-color: #fbf976;
-`;
+import styled from "styled-components";
 //Login
 export const CustomButtonStyle = styled.button`
   border: ${(props) => (props.border ? props.border : "none")};
@@ -32,7 +28,7 @@ export const Boton = styled.button`
   border-radius: 15px;
   height: 48px;
   align-items: center;
-  font-size: 14px;
+  font-size: 24px;
   cursor: pointer;
   box-sizing: border-box;
   width: 100%;
@@ -103,4 +99,14 @@ export const InputSelect = styled.select`
     white-space: pre;
     min-height: 20px;
   }
+`;
+
+//HEADER
+
+export const HeaderContainer = styled.div`
+  background-image: url("https://res.cloudinary.com/dxvzsg7fa/image/upload/v1654991392/5b667d877265b876259a1633403b0ec9_jddvkq.jpg");
+  background-size: 100%;
+  width: 100%;
+  height: 650px;
+  background-repeat: no-repeat;
 `;

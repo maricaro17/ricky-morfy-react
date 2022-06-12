@@ -1,13 +1,13 @@
 import AppRouters from "../routers/AppRouters";
-import { StyledContainer } from "../style/style";
+import'../style/style.css'
 
 
 
 function App() {
   return (
-    <StyledContainer>
-      <AppRouters />
-    </StyledContainer>
+    <div className="App">
+      <AppRouters/>
+    </div>
   );
 }
 

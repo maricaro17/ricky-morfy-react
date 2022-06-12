@@ -9,7 +9,7 @@ render () {
     return(
 
         <div>
-            <Card style={{ width: '18rem', color: 'black' }}>
+            <Card className="my-3 mx-3 bg-dark text-white" style={{ width: '18rem', color: 'black' }}>
                     <Card.Img variant="top" src={image} />
                     <Card.Body>
                         <Card.Title>
