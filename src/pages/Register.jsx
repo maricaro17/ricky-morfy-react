@@ -3,7 +3,7 @@ import { Container, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { startRegisterWithEmailPasswordName } from "../redux/actions/authAction";
 import CustomButton from "../components/CustomButton";
 import { ContainerInput, Icon, InputText } from "../style/style";
@@ -11,6 +11,7 @@ import { FaKey, FaEnvelope, FaUser } from "react-icons/fa";
 
 const Register = () => {
   const dispatch = useDispatch();
+  const loading = useSelector((store) => store.ui);
 
   const formik = useFormik({
     initialValues: {
@@ -23,9 +24,6 @@ const Register = () => {
       name: Yup.string()
         .min(3, "El nombre es muy corto")
         .required("Escribe tu nombre"),
-      lastname: Yup.string()
-        .min(3, "El nombre es muy corto")
-        .required("Escribe tus apellidos"),
       email: Yup.string().email("Email invalido").required("Email requerido"),
       password: Yup.string()
         .min(8, "La contraseña es muy corta - debe tener minimo 8 caracteres.")
@@ -135,6 +133,7 @@ const Register = () => {
           type="submit"
           className="my-1 btn-socials align-self-center"
           value="Registrar"
+          disabled={loading}
         />
         <p>
           ¿Ya Tienes una cuenta?{" "}

@@ -14,7 +14,7 @@ import {
 } from "../style/style";
 import useForm from "../hooks/useForm";
 import { useDispatch } from "react-redux";
-import { login, loginGoogle } from "../redux/actions/authAction";
+import { loginEmailPassword, loginGoogle } from "../redux/actions/authAction";
 const Login = () => {
   const dispatch = useDispatch();
   const [formValue, handleInputChange, rest] = useForm({
@@ -26,7 +26,7 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(login(email, password));
+    dispatch(loginEmailPassword(email, password));
     rest();
   };
 
@@ -48,6 +48,7 @@ const Login = () => {
               </Icon>
               <InputText
                 type="email"
+                name="email"
                 placeholder="Email"
                 autoComplete="off"
                 value={email}
@@ -61,6 +62,7 @@ const Login = () => {
               </Icon>
               <InputText
                 type="password"
+                name="password"
                 placeholder="Contraseña"
                 autoComplete="off"
                 value={password}

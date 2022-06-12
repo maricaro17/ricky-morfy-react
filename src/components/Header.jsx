@@ -1,12 +1,15 @@
 import React from 'react'
-import { HeaderContainer } from '../style/style'
+import { ContainerBienvenida, HeaderContainer } from '../style/style'
 
-const Header = () => {
+const Header = ({name}) => {
   return (
     <div>
         <HeaderContainer>
-            
+        <ContainerBienvenida>
+        <h1 className='text-white'>Bienvenido, {name}</h1>
+        </ContainerBienvenida>
         </HeaderContainer>
+    
     </div>
   )
 }

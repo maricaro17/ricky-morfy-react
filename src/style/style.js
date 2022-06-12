@@ -109,4 +109,13 @@ export const HeaderContainer = styled.div`
   width: 100%;
   height: 650px;
   background-repeat: no-repeat;
+  display: flex;
+
+`;
+
+export const ContainerBienvenida = styled.div`
+  background-color: #0000009e;
+  height: 80px;
+  width: 100%;
+  margin-top: 500px;
 `;
