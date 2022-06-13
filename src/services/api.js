@@ -10,7 +10,7 @@ const getCharterById = async (id) => {
   return result;
 };
 const getPages = async (url) => {
-  const resp = await fetch(url);
+  const resp = await fetch(url, {mode: 'no-cors'});
   const results = await resp.json();
   return results;
 };
