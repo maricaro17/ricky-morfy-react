@@ -2,7 +2,6 @@ import { onAuthStateChanged } from "firebase/auth";
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 import { auth } from "../firebase/FirebaseConfig";
 import Details from "../pages/Details";
