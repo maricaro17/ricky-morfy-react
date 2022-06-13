@@ -18,8 +18,8 @@ const Details = () => {
 
   return (
     <div>
-      <Container>
-        <h1>{character?.name}</h1>
+      <Container className="my-5 mx-5">
+        <h1 className="mt-5">{character?.name}</h1>
         <hr />
         <ContainerDetail>
           <div className="bg-dark" >

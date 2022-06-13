@@ -131,3 +131,9 @@ margin-top: 30px;
 export const Detalle = styled.div`
 margin:50px;
 `;
+export const ContainerFooter= styled.div`
+position: static;
+bottom: 0;
+width: 100%;
+
+`;

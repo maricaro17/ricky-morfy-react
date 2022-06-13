@@ -1,11 +1,12 @@
 import React from "react";
+import { ContainerFooter } from "../style/style";
 
 const Footer = () => {
   return (
     <div>
-      <footer class="bg-dark text-center text-white">
-        <div class="text-center p-3">© 2022 Copyright</div>
-      </footer>
+      <ContainerFooter className="bg-dark text-center text-white">
+        <div className="text-center p-3">© 2022 Con Fines de Practica</div>
+      </ContainerFooter>
     </div>
   );
 };
