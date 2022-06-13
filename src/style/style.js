@@ -245,8 +245,7 @@ export const ContainerInformacion = styled.div`
 `;
 //FOOTER
 export const ContainerFooter = styled.div`
-  position: fixed;
-  left: 0;
+  position: static;
   bottom: 0;
   width: 100%;
 `;
