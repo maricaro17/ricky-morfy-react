@@ -6,7 +6,7 @@ import * as Yup from "yup";
 import { useDispatch, useSelector } from "react-redux";
 import { startRegisterWithEmailPasswordName } from "../redux/actions/authAction";
 import CustomButton from "../components/CustomButton";
-import { ContainerInput, Icon, InputText } from "../style/style";
+import { ContainerImgLoginRegister, ContainerInput, ContainerLoginRegister, Icon, ImgLoginRegister, InputText } from "../style/style";
 import { FaKey, FaEnvelope, FaUser } from "react-icons/fa";
 
 const Register = () => {
@@ -45,10 +45,7 @@ const Register = () => {
   return (
     <>
     <Container>
-      <div className="d-flex align-items-center my-5 mx-5">
-      <div className="w-50">
-        <img src="https://res.cloudinary.com/dxvzsg7fa/image/upload/v1654996215/Rick-And-Morty-Wallpaper-Transparent-PNG_i5mswe.png" height={400} alt="" />
-      </div>
+      <ContainerLoginRegister>
       <div className="w-50">
       <Form onSubmit={formik.handleSubmit} className="m-auto">
         <h1 className="my-5 text-dark">Registro</h1>
@@ -145,7 +142,10 @@ const Register = () => {
         </p>
       </Form>
       </div>
-      </div>
+      <ContainerImgLoginRegister className="w-50">
+        <ImgLoginRegister src="https://res.cloudinary.com/dxvzsg7fa/image/upload/v1654996215/Rick-And-Morty-Wallpaper-Transparent-PNG_i5mswe.png" alt="" />
+      </ContainerImgLoginRegister>
+      </ContainerLoginRegister>
     </Container>
     </>
     

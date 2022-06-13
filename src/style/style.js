@@ -100,7 +100,21 @@ export const InputSelect = styled.select`
     min-height: 20px;
   }
 `;
+export const ContainerLoginRegister= styled.div`
+display: flex;
+align-items: center;
 
+`;
+export const ContainerImgLoginRegister = styled.div`
+display: flex;
+justify-content: center;
+width: min-content;
+
+`;
+export const ImgLoginRegister= styled.img`
+height: 100%;
+width: 100%;
+`;
 //HEADER
 
 export const HeaderContainer = styled.div`
@@ -229,7 +243,8 @@ export const ContainerInformacion = styled.div`
 `;
 //FOOTER
 export const ContainerFooter = styled.div`
-  position: static;
+  position: fixed;
+  left: 0;
   bottom: 0;
   width: 100%;
 `;

@@ -6,8 +6,11 @@ import { FaKey, FaEnvelope } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import {
   Boton,
+  ContainerImgLoginRegister,
   ContainerInput,
+  ContainerLoginRegister,
   Icon,
+  ImgLoginRegister,
   InputText,
   Redes,
   Subtitulo,
@@ -36,7 +39,7 @@ const Login = () => {
   return (
     <div>
       <Container className="justify-content-center">
-        <div className="d-flex align-items-center my-5 mx-5">
+        <ContainerLoginRegister >
         <div className="w-50">
           <Form onSubmit={handleSubmit}>
             <div>
@@ -89,10 +92,10 @@ const Login = () => {
             <Boton>Iniciar Sesion</Boton>
           </Form>
         </div>
-        <div className="w-50 d-flex justify-content-end">
-        <img src="https://res.cloudinary.com/dxvzsg7fa/image/upload/v1654915311/Rick-And-Morty-PNG-Images-HD_exn9qs.png" height={400} alt="" />
-        </div>
-        </div>
+        <ContainerImgLoginRegister className="w-50">
+        <ImgLoginRegister src="https://res.cloudinary.com/dxvzsg7fa/image/upload/v1654915311/Rick-And-Morty-PNG-Images-HD_exn9qs.png" alt="" />
+        </ContainerImgLoginRegister>
+        </ContainerLoginRegister>
       </Container>
     </div>
   );
