@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 import { auth } from "../firebase/FirebaseConfig";
+import Details from "../pages/Details";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
@@ -41,6 +42,14 @@ const AppRouters = () => {
               <PublicRouter>
                 <Register />
               </PublicRouter>
+            }
+          />
+          <Route
+            path="/detalle/:id"
+            element={
+              <PrivateRouter>
+                <Details />
+              </PrivateRouter>
             }
           />
           <Route

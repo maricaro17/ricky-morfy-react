@@ -119,3 +119,15 @@ export const ContainerBienvenida = styled.div`
   width: 100%;
   margin-top: 500px;
 `;
+
+export const ContainerDetail = styled.div`
+display: flex;
+justify-content: center;
+margin-bottom: 30px;
+margin-top: 30px;
+
+
+`;
+export const Detalle = styled.div`
+margin:50px;
+`;
