@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import api from "../services/api";
-import { ContainerDetail, Detalle} from "../style/style.js";
+import { ContainerDetail, ContainerImg, ContainerInformacion, Detalle, ImgDetalle} from "../style/style.js";
 
 const Details = () => {
     const params = useParams()
@@ -18,14 +18,14 @@ const Details = () => {
 
   return (
     <div>
-      <Container className="my-5 mx-5">
+      <Container /* className="my-5 mx-5" */>
         <h1 className="mt-5">{character?.name}</h1>
         <hr />
         <ContainerDetail>
-          <div className="bg-dark" >
-            <img src={character?.image} alt="" />
-          </div>
-          <div className="bg-dark text-white">
+          <ContainerImg className="bg-dark" >
+            <ImgDetalle src={character?.image} alt="" />
+          </ContainerImg>
+          <ContainerInformacion className="bg-dark text-white">
             <h1 className="m-3">Informacion</h1>
             <Detalle>
               <h5>Specie: {character?.species}</h5>
@@ -34,7 +34,7 @@ const Details = () => {
               <h5>Origin: {character?.origin?.name}</h5>
               <h5>Location: {character?.location?.name}</h5>      
             </Detalle>
-          </div>
+          </ContainerInformacion>
         </ContainerDetail>
       </Container>
     </div>

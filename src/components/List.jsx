@@ -9,7 +9,7 @@ import {
 import Cards from "./Cards";
 import CustomButton from "./CustomButton";
 
-const List = () => {
+const List = ({name}) => {
   const dispatch = useDispatch();
   const characters = useSelector((state) => state.characters);
   const [nextUrl, setNextUrl] = useState(null);
@@ -31,6 +31,7 @@ const List = () => {
 
   return (
     <Container>
+      <h1>Hola, {name}</h1>
       <h1>Rick And Morty</h1>
       <hr />
       <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>

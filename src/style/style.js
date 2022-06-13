@@ -109,31 +109,127 @@ export const HeaderContainer = styled.div`
   width: 100%;
   height: 650px;
   background-repeat: no-repeat;
-  display: flex;
-
+  @media (max-width: 390px) {
+    height: 170px;
+  }
+   @media (min-width: 391px) and (max-width: 499px) {
+    height: 200px;
+  }
+  
+  @media (min-width: 500px) and (max-width: 699px) {
+    height: 250px;
+  }
+ 
+  @media (min-width: 700px) and (max-width: 899px) {
+    height: 330px;
+  }
+  @media (min-width: 900px) and (max-width: 1199px) {
+    height: 400px;
+  }
+  @media (min-width: 1200px) and (max-width: 1499px) {
+    height: 500px;
+  }
+  
+  
 `;
 
-export const ContainerBienvenida = styled.div`
-  background-color: #0000009e;
-  height: 80px;
-  width: 100%;
-  margin-top: 500px;
-`;
-
+//DETALLE
 export const ContainerDetail = styled.div`
-display: flex;
-justify-content: center;
-margin-bottom: 30px;
-margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  @media (max-width: 390px) {
+    flex-direction: column;
 
-
+  }
+  @media (min-width: 391px) and (max-width: 499px) {
+    flex-direction: column;
+  }
+  @media (min-width: 500px) and (max-width: 699px) {
+    flex-direction: column;
+  }
+  @media (min-width: 700px) and (max-width: 799px) {
+    display: flex;
+    
+  }
+  @media (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+  }
 `;
 export const Detalle = styled.div`
-margin:50px;
+  margin: 50px;
+  /* @media (max-width: 390px) {
+    margin: 10px;
+  }
+  @media (min-width: 391px) and (max-width: 699px) {
+    margin: 20px;
+  } */
+  @media (min-width: 700px) and (max-width: 770px) {
+    margin: 17px;
+    
+  }
+  @media (min-width: 771px) and (max-width: 799px) {
+    margin: 61px;
+    
+  }
+  @media (min-width: 1200px) and (max-width: 1399px) {
+    margin: 50px;
+    
+  }
 `;
-export const ContainerFooter= styled.div`
-position: static;
-bottom: 0;
-width: 100%;
+export const ContainerImg = styled.div`
+  width: 100%;
+  height: 100%;
+  @media (max-width: 390px) {
+    width: 50%;
+    height: 50%;
+  }
+  @media (min-width: 391px) and (max-width: 499px) {
+    width: 80%;
+    height: 80%;
+  }
+  @media (min-width: 500px) and (max-width: 699px) {
+    width: 85%;
+    height: 85%;
+  }
+  @media (min-width: 700px) and (max-width: 799px) {
+    width: 100%;
+    height: 100%;
+  }
+`;
 
+export const ImgDetalle = styled.img`
+  width: 100%;
+`;
+export const ContainerInformacion = styled.div`
+  width: 100%;
+  @media (max-width: 390px) {
+    width: 50%;
+    height: 50%;
+  }
+  @media (min-width: 391px) and (max-width: 499px) {
+    width: 80%;
+    height: 80%;
+  }
+  @media (min-width: 500px) and (max-width: 699px) {
+    width: 85%;
+    height: 85%;
+  }
+  @media (min-width: 700px) and (max-width: 770px) {
+    width: 100%;
+    height: 100%;
+  }
+  @media (min-width: 771px) and (max-width: 799px) {
+    width: 100%;
+    height: 100%;
+  }
+`;
+//FOOTER
+export const ContainerFooter = styled.div`
+  position: static;
+  bottom: 0;
+  width: 100%;
 `;

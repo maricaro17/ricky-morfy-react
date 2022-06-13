@@ -9,8 +9,8 @@ const Home = () => {
   console.log(user);
   return (
     <div>
-      <Header name={user.name}/>
-        <List/>
+      <Header/>
+        <List name={user.name}/>
     </div>
   )
 }
