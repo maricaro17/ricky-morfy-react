@@ -103,6 +103,7 @@ export const InputSelect = styled.select`
 export const ContainerLoginRegister= styled.div`
 display: flex;
 align-items: center;
+height: 100%;
 
 
 `;
