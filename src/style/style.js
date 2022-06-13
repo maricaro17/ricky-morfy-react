@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 //Login
 export const CustomButtonStyle = styled.button`
   border: ${(props) => (props.border ? props.border : "none")};
@@ -9,7 +10,6 @@ export const CustomButtonStyle = styled.button`
   display: flex;
   margin: 5px;
 `;
-
 export const Google = styled.button`
   border: 0px solid #ea4335;
   color: #ffff;
@@ -66,7 +66,6 @@ export const Icon = styled.span`
   margin-right: 20px;
   position: absolute;
 `;
-
 export const InputText = styled.input`
   width: 100%;
   height: 3em;
@@ -77,7 +76,6 @@ export const InputText = styled.input`
   padding-left: 60px;
   padding-right: 20px;
 `;
-
 export const InputSelect = styled.select`
   width: 100%;
   height: 3em;
@@ -100,25 +98,20 @@ export const InputSelect = styled.select`
     min-height: 20px;
   }
 `;
-export const ContainerLoginRegister= styled.div`
-display: flex;
-align-items: center;
-height: 100%;
-
-
+export const ContainerLoginRegister = styled.div`
+  display: flex;
+  align-items: center;
 `;
 export const ContainerImgLoginRegister = styled.div`
-display: flex;
-justify-content: center;
-width: min-content;
-
+  display: flex;
+  justify-content: center;
+  width: min-content;
 `;
-export const ImgLoginRegister= styled.img`
-height: 400px;
-
+export const ImgLoginRegister = styled.img`
+  height: 400px;
 `;
+
 //HEADER
-
 export const HeaderContainer = styled.div`
   background-image: url("https://res.cloudinary.com/dxvzsg7fa/image/upload/v1654991392/5b667d877265b876259a1633403b0ec9_jddvkq.jpg");
   background-size: 100%;
@@ -128,14 +121,14 @@ export const HeaderContainer = styled.div`
   @media (max-width: 390px) {
     height: 170px;
   }
-   @media (min-width: 391px) and (max-width: 499px) {
+  @media (min-width: 391px) and (max-width: 499px) {
     height: 200px;
   }
-  
+
   @media (min-width: 500px) and (max-width: 699px) {
     height: 250px;
   }
- 
+
   @media (min-width: 700px) and (max-width: 899px) {
     height: 330px;
   }
@@ -145,8 +138,6 @@ export const HeaderContainer = styled.div`
   @media (min-width: 1200px) and (max-width: 1499px) {
     height: 500px;
   }
-  
-  
 `;
 
 //DETALLE
@@ -157,7 +148,6 @@ export const ContainerDetail = styled.div`
   margin-top: 30px;
   @media (max-width: 390px) {
     flex-direction: column;
-
   }
   @media (min-width: 391px) and (max-width: 499px) {
     flex-direction: column;
@@ -167,7 +157,6 @@ export const ContainerDetail = styled.div`
   }
   @media (min-width: 700px) and (max-width: 799px) {
     display: flex;
-    
   }
   @media (min-width: 1200px) {
     display: flex;
@@ -185,15 +174,12 @@ export const Detalle = styled.div`
   } */
   @media (min-width: 700px) and (max-width: 770px) {
     margin: 17px;
-    
   }
   @media (min-width: 771px) and (max-width: 799px) {
     margin: 61px;
-    
   }
   @media (min-width: 1200px) and (max-width: 1399px) {
     margin: 50px;
-    
   }
 `;
 export const ContainerImg = styled.div`
@@ -216,7 +202,6 @@ export const ContainerImg = styled.div`
     height: 100%;
   }
 `;
-
 export const ImgDetalle = styled.img`
   width: 100%;
 `;
@@ -243,9 +228,5 @@ export const ContainerInformacion = styled.div`
     height: 100%;
   }
 `;
-//FOOTER
-export const ContainerFooter = styled.div`
-  position: static;
-  bottom: 0;
-  width: 100%;
-`;
+
+
